@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EsG-bw-g4k">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tF1-nu-6tt">
+            <objects>
+                <viewController id="EsG-bw-g4k" customClass="ViewController" customModule="Scaling_With_Transforms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vEs-gt-5c4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h36-jT-4me" customClass="BallView" customModule="Scaling_With_Transforms" customModuleProvider="target">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qcy-3d-64w">
+                                        <rect key="frame" x="88.5" y="88.5" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="DgK-68-tmV"/>
+                                            <constraint firstAttribute="height" constant="30" id="TOd-mk-fSZ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89017016270000004" green="0.6505511558" blue="0.20681720889999999" alpha="0.54569777399999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="h36-jT-4me" secondAttribute="height" multiplier="1:1" id="0m8-9Q-Tly"/>
+                                    <constraint firstItem="qcy-3d-64w" firstAttribute="centerX" secondItem="h36-jT-4me" secondAttribute="centerX" id="520-75-izh"/>
+                                    <constraint firstItem="qcy-3d-64w" firstAttribute="centerY" secondItem="h36-jT-4me" secondAttribute="centerY" id="n05-Sm-hef"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="40"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="ball" destination="qcy-3d-64w" id="tA9-RQ-g6g"/>
+                                    <outlet property="scaleButton" destination="Z9Y-Or-WLd" id="kEv-gQ-vqW"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9Y-Or-WLd">
+                                <rect key="frame" x="191.5" y="524.5" width="31" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Scale"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rsd-4e-SYl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z9Y-Or-WLd" firstAttribute="centerX" secondItem="h36-jT-4me" secondAttribute="centerX" id="EUx-ml-5XV"/>
+                            <constraint firstItem="h36-jT-4me" firstAttribute="width" secondItem="vEs-gt-5c4" secondAttribute="width" multiplier="0.5" id="HCy-Xd-9Wg"/>
+                            <constraint firstItem="Z9Y-Or-WLd" firstAttribute="bottom" secondItem="h36-jT-4me" secondAttribute="bottom" id="Qbd-9s-lAV"/>
+                            <constraint firstItem="h36-jT-4me" firstAttribute="centerY" secondItem="vEs-gt-5c4" secondAttribute="centerY" id="lQe-bz-lsF"/>
+                            <constraint firstItem="h36-jT-4me" firstAttribute="centerX" secondItem="vEs-gt-5c4" secondAttribute="centerX" id="taM-fn-cxR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ballView" destination="h36-jT-4me" id="3ZU-EO-MRg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Omf-0m-oD6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-288.40579710144931" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
